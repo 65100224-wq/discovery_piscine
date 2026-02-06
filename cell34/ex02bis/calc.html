@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculator jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        body { display: flex; justify-content: center; align-items: center; height: 100vh; background-color: #333; }
+        input, select { padding: 10px; margin: 5px; font-size: 1.2em; }
+    </style>
+</head>
+<body>
+    <input type="text" id="leftMember">
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+    <input type="text" id="rightMember">
+    <input type="submit" id="btn" value="Try me!">
+
+    <script>
+        $(document).ready(function() {
+            setInterval(function() {
+                alert("Please, use me...");
+            }, 30000);
+
+            $('#btn').click(function() {
+                var leftStr = $('#leftMember').val();
+                var rightStr = $('#rightMember').val();
+                var op = $('#operator').val();
+                var left = parseInt(leftStr);
+                var right = parseInt(rightStr);
+
+                if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                    alert("Error :(");
+                    console.log("Error :(");
+                    return;
+                }
+
+                if ((op === '/' || op === '%') && right === 0) {
+                    console.log("It’s over 9000!");
+                    alert("It’s over 9000!");
+                    return;
+                }
+
+                var result = 0;
+                if (op === '+') result = left + right;
+                else if (op === '-') result = left - right;
+                else if (op === '*') result = left * right;
+                else if (op === '/') result = left / right;
+                else if (op === '%') result = left % right;
+
+                console.log(result);
+                alert(result);
+            });
+        });
+    </script>
+</body>
+</html>

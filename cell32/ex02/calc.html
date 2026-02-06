@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>It's over 9000</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #333;
+            color: white;
+            font-family: sans-serif;
+        }
+        input, select {
+            padding: 10px;
+            margin: 5px;
+            font-size: 1.2em;
+        }
+    </style>
+</head>
+<body>
+
+    <input type="text" id="leftMember">
+    
+    <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="rightMember">
+    
+    <input type="submit" id="btn" value="Try me!">
+
+    <script>
+        setInterval(function() {
+            alert("Please, use me...");
+        }, 30000);
+
+        function calculate() {
+            var leftStr = document.getElementById("leftMember").value;
+            var rightStr = document.getElementById("rightMember").value;
+            var op = document.getElementById("operator").value;
+
+
+            var left = parseInt(leftStr);
+            var right = parseInt(rightStr);
+
+            if (!/^\d+$/.test(leftStr) || !/^\d+$/.test(rightStr)) {
+                alert("Error :(");
+                console.log("Error :(");
+                return;
+            }
+
+            if ((op === '/' || op === '%') && right === 0) {
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
+                return;
+            }
+
+            var result = 0;
+            if (op === '+') result = left + right;
+            else if (op === '-') result = left - right;
+            else if (op === '*') result = left * right;
+            else if (op === '/') result = left / right;
+            else if (op === '%') result = left % right;
+
+            console.log(result);
+            alert(result);
+        }
+
+    
+        document.getElementById("btn").addEventListener("click", calculate);
+
+    </script>
+</body>
+</html>

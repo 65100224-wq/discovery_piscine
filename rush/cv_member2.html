@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resume - [ใส่ชื่อเล่น]</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            padding-top: 56px;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border: 6px solid #fff;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+
+        .skill-bar {
+            height: 10px;
+            border-radius: 5px;
+        }
+
+        /* เปลี่ยนสี Theme ตรงนี้ (เปลี่ยนรหัสสี hex code) */
+        .bg-gradient-primary {
+            background: linear-gradient(to right, #4e54c8, #8f94fb);
+            color: white;
+        }
+    </style>
+</head>
+
+<body data-bs-spy="scroll" data-bs-target="#navbar-example" data-bs-offset="100">
+
+    <nav id="navbar-example" class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">← Back</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education & Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="about" class="bg-gradient-primary text-center">
+        <div class="container">
+            <img src="https://ui-avatars.com/api/?name=Member+Two&background=fff&color=4e54c8&size=200" alt="Profile"
+                class="rounded-circle profile-img mb-4">
+
+            <h1 class="display-4 fw-bold">[YOUR FULL NAME]</h1>
+
+            <h3 class="mb-3" style="opacity: 0.9;">[YOUR JOB TITLE / MAJOR]</h3>
+
+            <p class="lead w-75 mx-auto mt-4" style="opacity: 0.9;">
+                "[YOUR QUOTE OR MOTTO]"<br>
+                [Short description about yourself, what you study, and what you are interested in.]
+            </p>
+        </div>
+    </section>
+
+    <section id="education" class="bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <h3 class="mb-4 text-primary"><i class="fas fa-graduation-cap me-2"></i>Education</h3>
+
+                    <div class="card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">[Bachelor of ...]</h5>
+                            <p class="card-text text-muted mb-1">[University Name]</p>
+                            <p class="small text-secondary">[Year 1 - 4 or Graduated Year]</p>
+                            <ul class="mt-2">
+                                <li>[Major / Focus 1]</li>
+                                <li>[Major / Focus 2]</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title fw-bold">[Course Name / High School]</h5>
+                            <p class="card-text text-muted mb-1">[School Name / Institute]</p>
+                            <p class="small text-secondary">[Year]</p>
+                            <p>[Description of what you learned]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <h3 class="mb-4 text-primary"><i class="fas fa-briefcase me-2"></i>Skills</h3>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>[Skill Name 1]</span>
+                            <span class="fw-bold">[Level]</span>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar bg-success" style="width: 90%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>[Skill Name 2]</span>
+                            <span class="fw-bold">[Level]</span>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar bg-primary" style="width: 75%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>[Skill Name 3]</span>
+                            <span class="fw-bold">[Level]</span>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar bg-info" style="width: 50%"></div>
+                        </div>
+                    </div>
+
+                    <h5 class="mt-4 mb-3 text-secondary"><i class="fas fa-code me-2"></i>Other Skills</h5>
+                    <div class="mb-3">
+                        <div class="d-flex justify-content-between">
+                            <span>[Other Skill / Language]</span>
+                            <span class="fw-bold">[Level]</span>
+                        </div>
+                        <div class="progress skill-bar">
+                            <div class="progress-bar bg-danger" style="width: 40%"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="bg-dark text-white text-center py-5">
+        <div class="container">
+            <h2 class="mb-4">Get In Touch</h2>
+            <p class="mb-5 text-secondary">[Open for opportunities / Feel free to contact me]</p>
+
+            <div class="row justify-content-center">
+                <div class="col-md-4">
+                    <div class="d-flex justify-content-center gap-4 fs-1">
+                        <a href="[Link LinkedIn]" class="text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:[Email Address]" class="text-white"><i class="fas fa-envelope"></i></a>
+                        <a href="[Link Facebook]" class="text-white"><i class="fab fa-facebook-square"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <p class="mt-5 mb-0 small text-secondary">&copy; 2026 [YOUR NAME]. Designed for Rush Project.</p>
+        </div>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

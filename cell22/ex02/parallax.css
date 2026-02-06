@@ -1,0 +1,51 @@
+
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.parallax-bg {
+    min-height: 100vh; 
+
+    background-attachment: fixed;
+    
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-img1 {
+    background-image: url('https://placedog.net/1920/1080?id=3');
+}
+
+
+.bg-img2 {
+
+    background-image: url('https://placedog.net/1920/1080?id=15');
+}
+
+
+.black-block {
+    height: 400px; 
+    background-color: black;
+    color: white;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.message {
+    background-color: transparent;
+    color: white;
+    font-size: 2em;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px #000000; 
+}
